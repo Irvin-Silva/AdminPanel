@@ -1,42 +1,59 @@
-import './Navbar.scss'
-import SearchIcon from '@mui/icons-material/Search';
-import LanguageIcon from '@mui/icons-material/Language';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
-import FullscreenIcon from '@mui/icons-material/Fullscreen';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
-import ListIcon from '@mui/icons-material/List';
+import "./Navbar.scss";
+import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import FullscreenExitOutlinedIcon from "@mui/icons-material/FullscreenExitOutlined";
+import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
+import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
+import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
+import { useContext } from "react";
 
-export const Navbar = () => {
+const Navbar = () => {
+  
+
   return (
-    <div className='navbar'>
+    <div className="navbar">
       <div className="wrapper">
-        <input type="text" placeholder='Buscar...' />
-        <SearchIcon />
+        <div className="search">
+          <input type="text" placeholder="Search..." />
+          <SearchOutlinedIcon />
+        </div>
+        <div className="items">
+          <div className="item">
+            <LanguageOutlinedIcon className="icon" />
+            English
+          </div>
+          <div className="item">
+            <DarkModeOutlinedIcon
+              className="icon"
+              
+            />
+          </div>
+          <div className="item">
+            <FullscreenExitOutlinedIcon className="icon" />
+          </div>
+          <div className="item">
+            <NotificationsNoneOutlinedIcon className="icon" />
+            <div className="counter">1</div>
+          </div>
+          <div className="item">
+            <ChatBubbleOutlineOutlinedIcon className="icon" />
+            <div className="counter">2</div>
+          </div>
+          <div className="item">
+            <ListOutlinedIcon className="icon" />
+          </div>
+          <div className="item">
+            <img
+              src="https://www.pngarts.com/files/6/User-Avatar-in-Suit-PNG.png"
+              alt=""
+              className="avatar"
+            />
+          </div>
+        </div>
       </div>
-      <div className="items">
-        <div className="item">
-           <LanguageIcon />
-           Inglés
-        </div>
-        <div className="item">
-           <DarkModeIcon />
-        </div>
-        <div className="item">
-           <FullscreenIcon />
-        </div>
-        <div className="item">
-           <NotificationsIcon />
-        </div>
-        <div className="item">
-           <ChatBubbleOutlineIcon />
-        </div>
-        <div className="item">
-           <ListIcon />
-        </div>
+    </div>
+  );
+};
 
-      </div>
-    </div> 
-  )
-}
-export default Navbar
+export default Navbar;
