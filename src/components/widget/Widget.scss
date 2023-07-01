@@ -38,6 +38,17 @@
             &.positive{
                 color:green
             }
+            &.negative{
+                color:green
+            }
+        }
+        .icon{
+            font-size: 18px;
+            padding: 5px;
+            background-color: rgba(173, 42, 147, 0.47);
+            border-radius: 7px;
+            align-self: flex-end;
+            
         }
     }
 
