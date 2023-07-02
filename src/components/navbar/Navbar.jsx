@@ -7,6 +7,7 @@ import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNone
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";
 import ListOutlinedIcon from "@mui/icons-material/ListOutlined";
 import { useContext } from "react";
+import Avatar from './Avatar.png';
 
 const Navbar = () => {
   
@@ -45,7 +46,7 @@ const Navbar = () => {
           </div>
           <div className="item">
             <img
-              src="https://www.pngarts.com/files/6/User-Avatar-in-Suit-PNG.png"
+              src={Avatar} 
               alt=""
               className="avatar"
             />
